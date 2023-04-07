@@ -41,7 +41,7 @@ Public Class Form1
 
         console()
 
-        ctl()
+        'ctl()
         conn.Close()
 
         'End Using
