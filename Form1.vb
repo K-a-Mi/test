@@ -41,7 +41,7 @@ Public Class Form1
 
         console()
 
-        ctl()
+        'ctl()
         conn.Close()
 
         'End Using
@@ -70,6 +70,8 @@ Public Class Form1
         System.Runtime.InteropServices.Marshal.ReleaseComObject(ss)
         System.Runtime.InteropServices.Marshal.ReleaseComObject(wb)
         System.Runtime.InteropServices.Marshal.ReleaseComObject(wbs)
+
+
         System.Runtime.InteropServices.Marshal.ReleaseComObject(ea)
 
     End Sub
