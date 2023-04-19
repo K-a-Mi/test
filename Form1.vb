@@ -10,6 +10,9 @@ Public Class Form1
 
     Public mei As String
 
+    'Form2のインスタンス化
+    Public f2 As Form2 = New Form2
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'DB接続
@@ -110,11 +113,92 @@ Public Class Form1
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
-        Dim f2 As Form2 = New Form2
+        Call show_form()
+
+    End Sub
+
+    Public Sub show_form()
+
         Try
             f2.ShowDialog()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
+        Me.Close()
+
+    End Sub
+
+    Private Sub ex()
+
+        Dim i = 1
+
+        Dim filename = "C:\Users\User\test1.xlsx"
+
+        Dim ea As Excel.Application = New Excel.Application
+        Dim wbs As Excel.Workbooks = ea.Workbooks
+        Dim wb As Excel.Workbook = wbs.Open(filename)
+
+        Dim ss As Excel.Sheets = wb.Worksheets
+        Dim ws As Excel.Worksheet = ss(1)
+        Dim cs As Excel.Range = ws.Cells
+
+        Try
+            conn.Open()
+
+            Dim cmd As NpgsqlCommand = New NpgsqlCommand("select * from tokumt;", conn)
+
+            Dim da As NpgsqlDataAdapter = New NpgsqlDataAdapter(cmd)
+
+            reader = cmd.ExecuteReader()
+
+            While (reader.Read())
+
+                i += 1
+                cs.Range("B" + i.ToString).Value = Replace(reader("tokucd"), Space(1), String.Empty)
+                cs.Range("C" + i.ToString).Value = Replace(reader("tokumei"), Space(1), String.Empty)
+                cs.Range("D" + i.ToString).Value = reader("tokuryak").ToString.Trim()
+                cs.Range("E" + i.ToString).Value = reader("mukouflg")
+                cs.Range("F" + i.ToString).Value = reader("kousinniji")
+
+            End While
+
+            ea.DisplayAlerts = False
+
+            wb.Save()
+
+            'System.Runtime.InteropServices.Marshal.ReleaseComObject(cs)
+            'System.Runtime.InteropServices.Marshal.ReleaseComObject(ws)
+            'System.Runtime.InteropServices.Marshal.ReleaseComObject(ss)
+            'System.Runtime.InteropServices.Marshal.ReleaseComObject(wb)
+            'System.Runtime.InteropServices.Marshal.ReleaseComObject(wbs)
+
+            '終了
+            ea.Quit()
+
+            '解放
+            'System.Runtime.InteropServices.Marshal.ReleaseComObject(ea)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+
+        Call ex()
+
+        MsgBox("完了")
+
+        Try
+
+        Catch ex As System.IO.FileNotFoundException
+
         End Try
 
     End Sub
