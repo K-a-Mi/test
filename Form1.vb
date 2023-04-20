@@ -33,7 +33,7 @@ Public Class Form1
         DataGridView1.DataSource = dt
 
         'Readでレコードデータを取得する(次のレコードデータを取得する)
-        While (reader.Read())
+        While reader.Read()
 
             mei = reader("tokumei")
 
@@ -137,6 +137,9 @@ Public Class Form1
 
         Dim i = 1
 
+        '本日の日時取得
+        Dim dt1 As DateTime = DateTime.Now
+
         Dim filename = "C:\Users\User\test1.xlsx"
 
         Dim ea As Excel.Application = New Excel.Application
@@ -156,7 +159,7 @@ Public Class Form1
 
             reader = cmd.ExecuteReader()
 
-            While (reader.Read())
+            While reader.Read()
 
                 i += 1
                 cs.Range("B" + i.ToString).Value = Replace(reader("tokucd"), Space(1), String.Empty)
@@ -166,6 +169,10 @@ Public Class Form1
                 cs.Range("F" + i.ToString).Value = reader("kousinniji")
 
             End While
+
+            '日時入力(形式指定)
+            cs.Range("B1").Value = dt1.ToString("yyyy/MM/dd")
+            cs.Range("C1").Value = dt1.ToString("HH:mm:ss")
 
             ea.DisplayAlerts = False
 
