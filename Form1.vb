@@ -1,12 +1,17 @@
 ﻿Imports Npgsql
 Imports Microsoft.Office.Interop
+Imports Microsoft.Office.Interop.Excel
 
 Public Class Form1
 
     'DB接続パス
     Public conn As New NpgsqlConnection("Server=192.168.0.111; Port=5432; User Id=postgres; Password=brains; Database=brains")
+    Public conn2 As New NpgsqlConnection("Server=192.168.0.111; Port=5432; User Id=postgres; Password=brains; Database=postgres")
 
     Public reader As NpgsqlDataReader
+    Public reader1 As NpgsqlDataReader
+    Public reader2 As NpgsqlDataReader
+    Public reader3 As NpgsqlDataReader
 
     Public mei As String
 
@@ -22,9 +27,9 @@ Public Class Form1
         Dim cmd As NpgsqlCommand = New NpgsqlCommand("select * from tokumt;", conn)
 
         Dim da As NpgsqlDataAdapter = New NpgsqlDataAdapter(cmd)
-        Dim dt As DataTable = New DataTable()
+        Dim dt As DataTable()
 
-        da.Fill(dt)
+        'da.Fill(dt)
 
         'SQL実行
         reader = cmd.ExecuteReader()
@@ -63,7 +68,8 @@ Public Class Form1
 
         Dim ea As Excel.Application = New Excel.Application
         Dim wbs As Excel.Workbooks = ea.Workbooks
-        Dim wb As Excel.Workbook = wbs.Open(filename)
+        '保護ファイルを開ける(ない場合はPasswordは省略)
+        Dim wb As Excel.Workbook = wbs.Open(filename, Password:="test1")
 
         Dim ss As Excel.Sheets = wb.Worksheets
         Dim ws As Excel.Worksheet = ss(1)
@@ -144,7 +150,7 @@ Public Class Form1
 
         Dim ea As Excel.Application = New Excel.Application
         Dim wbs As Excel.Workbooks = ea.Workbooks
-        Dim wb As Excel.Workbook = wbs.Open(filename)
+        Dim wb As Excel.Workbook = wbs.Open(filename, Password:="test1")
 
         Dim ss As Excel.Sheets = wb.Worksheets
         Dim ws As Excel.Worksheet = ss(1)
@@ -173,6 +179,13 @@ Public Class Form1
             '日時入力(形式指定)
             cs.Range("B1").Value = dt1.ToString("yyyy/MM/dd")
             cs.Range("C1").Value = dt1.ToString("HH:mm:ss")
+
+            'シートの後ろにシートをコピー
+            ws.Copy(After:=ws)
+            '作業シートをコピーしたシートを選択
+            ws = ss("copy1 (2)")
+            'シートの名前を変更
+            ws.Name = "test1"
 
             ea.DisplayAlerts = False
 
@@ -208,5 +221,50 @@ Public Class Form1
 
         End Try
 
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+
+        'テーブル有無確認SQL(WHERE table_name = (検索テーブル)
+        Dim tb_name = "SELECT * FROM information_schema.tables WHERE table_name = 'test1';"
+
+        Try
+            conn2.Open()
+
+            Dim cmd As NpgsqlCommand = New NpgsqlCommand(tb_name, conn2)
+            Dim da As NpgsqlDataAdapter = New NpgsqlDataAdapter(cmd)
+
+            reader = cmd.ExecuteReader()
+
+            If reader.Read() = True Then
+
+                MsgBox("存在します。")
+
+            Else
+
+                reader.Close()
+
+                Dim creat_tb2 = "create table public.test1(id character varying(100),name character varying(100),kousinniji timestamp(6) without time zone);"
+                Dim creat_tb3 = "comment on table public.test1 is 'テスト1テーブル'; comment on column test1.id is 'ID'; comment on column test1.name is '名称'; comment on column test1.kousinniji is '更新日時';"
+
+                Dim creat_cmd2 As NpgsqlCommand = New NpgsqlCommand(creat_tb2, conn2)
+                Dim creat_cmd3 As NpgsqlCommand = New NpgsqlCommand(creat_tb3, conn2)
+
+                'Dim da2 As NpgsqlDataAdapter = New NpgsqlDataAdapter(creat_cmd2)
+                reader2 = creat_cmd2.ExecuteReader()
+                reader2.Close()
+
+                'Dim da3 As NpgsqlDataAdapter = New NpgsqlDataAdapter(creat_cmd3)
+                reader3 = creat_cmd3.ExecuteReader()
+                reader.Close()
+
+                MsgBox("作成しました。")
+
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+        conn2.Close()
     End Sub
 End Class
