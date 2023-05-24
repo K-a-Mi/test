@@ -1,0 +1,599 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+WebApplication1
+</name>
+</assembly>
+<members>
+<member name="T:WebApplication1.My.MyWebExtension">
+ <summary>
+ Web プロジェクトの My Namespace で使用できるプロパティを定義するためのモジュール。
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:WebApplication1.My.MyWebExtension.Computer">
+ <summary>
+ ホスト コンピューターに関する情報を返します。
+ </summary>
+</member>
+<member name="P:WebApplication1.My.MyWebExtension.User">
+ <summary>
+ 現在の Web ユーザーに関する情報を返します。
+ </summary>
+</member>
+<member name="P:WebApplication1.My.MyWebExtension.Request">
+ <summary>
+ Request オブジェクトを返します。
+ </summary>
+</member>
+<member name="P:WebApplication1.My.MyWebExtension.Response">
+ <summary>
+ Response オブジェクトを返します。
+ </summary>
+</member>
+<member name="P:WebApplication1.My.MyWebExtension.Log">
+ <summary>
+ Asp ログ オブジェクトを返します。
+ </summary>
+</member>
+<member name="F:WebApplication1.WebForm1._form1">
+<summary>
+form1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm1._Label1">
+<summary>
+Label1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm1._TextBox1">
+<summary>
+TextBox1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm1._Label2">
+<summary>
+Label2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm1._TextBox2">
+<summary>
+TextBox2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm1._Button1">
+<summary>
+Button1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm1._Button2">
+<summary>
+Button2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm2._form1">
+<summary>
+form1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm2._Label1">
+<summary>
+Label1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm2._Label2">
+<summary>
+Label2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm2._DropDownList1">
+<summary>
+DropDownList1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm2._Button1">
+<summary>
+Button1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm3._form1">
+<summary>
+form1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm3._Label1">
+<summary>
+Label1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm3._Label4">
+<summary>
+Label4 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm3._Label3">
+<summary>
+Label3 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm3._Label2">
+<summary>
+Label2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm3._Button1">
+<summary>
+Button1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm3._Button2">
+<summary>
+Button2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm3._Button3">
+<summary>
+Button3 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm4._form1">
+<summary>
+form1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm4._Label1">
+<summary>
+Label1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm4._Button1">
+<summary>
+Button1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm4._Button2">
+<summary>
+Button2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm4._Button3">
+<summary>
+Button3 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm4._Button4">
+<summary>
+Button4 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm4._Button5">
+<summary>
+Button5 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._form1">
+<summary>
+form1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._Label1">
+<summary>
+Label1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._TextBox1">
+<summary>
+TextBox1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._Label2">
+<summary>
+Label2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._DropDownList1">
+<summary>
+DropDownList1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._Label3">
+<summary>
+Label3 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._DropDownList2">
+<summary>
+DropDownList2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._Label4">
+<summary>
+Label4 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._Label5">
+<summary>
+Label5 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._TextBox2">
+<summary>
+TextBox2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._Label6">
+<summary>
+Label6 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._DropDownList3">
+<summary>
+DropDownList3 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._Label7">
+<summary>
+Label7 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._DropDownList4">
+<summary>
+DropDownList4 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._Label8">
+<summary>
+Label8 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._Label9">
+<summary>
+Label9 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._TextBox3">
+<summary>
+TextBox3 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._Button3">
+<summary>
+Button3 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._Button5">
+<summary>
+Button5 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._Button1">
+<summary>
+Button1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._Button4">
+<summary>
+Button4 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm5._Button2">
+<summary>
+Button2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm6._form1">
+<summary>
+form1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm6._Label1">
+<summary>
+Label1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm6._Label2">
+<summary>
+Label2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm6._TextBox1">
+<summary>
+TextBox1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm6._Label3">
+<summary>
+Label3 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm6._TextBox2">
+<summary>
+TextBox2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm6._Label4">
+<summary>
+Label4 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm6._TextBox3">
+<summary>
+TextBox3 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm6._Button1">
+<summary>
+Button1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm6._Button3">
+<summary>
+Button3 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm6._Button4">
+<summary>
+Button4 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm6._GridView1">
+<summary>
+GridView1 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+<member name="F:WebApplication1.WebForm6._Button2">
+<summary>
+Button2 コントロール。
+</summary>
+<remarks>
+自動生成されたフィールド。
+変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+</remarks>
+</member>
+</members>
+</doc>
